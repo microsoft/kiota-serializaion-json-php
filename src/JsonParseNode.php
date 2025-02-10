@@ -53,7 +53,7 @@ class JsonParseNode implements ParseNode
      * @inheritDoc
      */
     public function getStringValue(): ?string {
-        return is_string($this->jsonNode) ? addcslashes($this->jsonNode, "\\\r\n") : null;
+        return is_string($this->jsonNode) ? $this->jsonNode : null;
     }
 
     /**

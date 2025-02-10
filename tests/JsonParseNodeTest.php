@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Kiota\Serialization\Tests;
+namespace Microsoft\Kiota\Serialization\Json\Tests;
 
 use DateInterval;
 use DateTime;
@@ -13,9 +13,9 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 use Microsoft\Kiota\Abstractions\Types\Time;
 use Microsoft\Kiota\Serialization\Json\JsonParseNode;
 use Microsoft\Kiota\Serialization\Json\JsonParseNodeFactory;
-use Microsoft\Kiota\Serialization\Tests\Samples\Address;
-use Microsoft\Kiota\Serialization\Tests\Samples\MaritalStatus;
-use Microsoft\Kiota\Serialization\Tests\Samples\Person;
+use Microsoft\Kiota\Serialization\Json\Tests\Samples\Address;
+use Microsoft\Kiota\Serialization\Json\Tests\Samples\MaritalStatus;
+use Microsoft\Kiota\Serialization\Json\Tests\Samples\Person;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
 
@@ -158,6 +158,15 @@ class JsonParseNodeTest extends TestCase
         $this->parseNode = new JsonParseNode('Silas Kenneth was here');
         $expected = $this->parseNode->getStringValue();
         $this->assertEquals('Silas Kenneth was here', $expected);
+    }
+
+    /**
+     */
+    public function testGetStringValueWithSlashAndWhitespace(): void
+    {
+        $this->parseNode = new JsonParseNode('\ This is a test with a tab at then and slash at the beginning \t.');
+        $expected = $this->parseNode->getStringValue();
+        $this->assertEquals('\ This is a test with a tab at then and slash at the beginning \t.', $expected);
     }
 
     public function testGetChildNode(): void {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Kiota\Serialization\Tests;
+namespace Microsoft\Kiota\Serialization\Json\Tests;
 
 use InvalidArgumentException;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriterFactory;

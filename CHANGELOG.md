@@ -5,11 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.5.0](https://github.com/microsoft/kiota-php/compare/microsoft-kiota-serialization-json-v1.4.0...microsoft-kiota-serialization-json-v1.5.0) (2025-02-10)
 
-### Added
 
-### Changed
+### Features
+
+* add kiota bundle ([575e3bc](https://github.com/microsoft/kiota-php/commit/575e3bc147dfcdd02128db5cad46b82959d3e38e))
+* add release please configuration to monorepo ([57de3a2](https://github.com/microsoft/kiota-php/commit/57de3a20091d1cd349d3c4b0e840920ac3a57d75))
+
+
+### Bug Fixes
+
+* Json serialization tests namespace ([e80465e](https://github.com/microsoft/kiota-php/commit/e80465ea81e2fba6c524ce664a2fe18c867219d4))
+* removes call to addcslashes in getStringValue() functions ([f7097a1](https://github.com/microsoft/kiota-php/commit/f7097a1e13c71f5fe4246d61dc806ac7300412ea))
+* removes call to addcslashes in getStringValue() functions ([64db05d](https://github.com/microsoft/kiota-php/commit/64db05d895bf6e1b09462dbd184665a6e7b3a66f))
+* subproject config & CI ([673beef](https://github.com/microsoft/kiota-php/commit/673beef4ae3f99c94a7730bb3810d4a1abdf27d5))
 
 ## [1.3.1]
 

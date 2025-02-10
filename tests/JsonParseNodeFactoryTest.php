@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Kiota\Serialization\Tests;
+namespace Microsoft\Kiota\Serialization\Json\Tests;
 
 use GuzzleHttp\Psr7\Utils;
 use InvalidArgumentException;

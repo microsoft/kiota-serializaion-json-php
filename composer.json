@@ -1,38 +1,40 @@
 {
-  "name": "microsoft/kiota-serialization-json",
-  "description": "Implementation of Kiota serialization abstractions using Json.",
-  "authors": [
-    {
-      "name": "Microsoft Graph Client Tooling",
-      "email": "graphtooling@service.microsoft.com",
-      "role": "Developer"
+    "name": "microsoft/kiota-serialization-json",
+    "description": "Implementation of Kiota serialization abstractions using Json.",
+    "authors": [
+        {
+            "name": "Microsoft Graph Client Tooling",
+            "email": "graphtooling@service.microsoft.com",
+            "role": "Developer"
+        }
+    ],
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Microsoft\\Kiota\\Serialization\\Json\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Microsoft\\Kiota\\Serialization\\Json\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "microsoft/kiota-abstractions": "^1.5.0",
+        "guzzlehttp/psr7": "^1.6 || ^2",
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.6.22",
+        "phpstan/phpstan": "^1.12.16"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     }
-  ],
-  "license": ["MIT"],
-  "autoload": {
-    "psr-4": {
-      "Microsoft\\Kiota\\Serialization\\Json\\": "src"
-    }
-  },
-  "autoload-dev": {
-	"psr-4": {
-		"Microsoft\\Kiota\\Serialization\\Tests\\": "tests"
-	}
-  },
-  "require": {
-    "microsoft/kiota-abstractions": "^1.4.0",
-    "guzzlehttp/psr7": "^1.6 || ^2",
-    "php": "^7.4 || ^8",
-    "ext-json": "*"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-latest",
-    "phpunit/phpunit": "^8 || ^9",
-    "phpstan/phpstan": "^1.4"
-  },
-  "config": {
-    "allow-plugins": {
-      "php-http/discovery": false
-    }
-  }
 }
